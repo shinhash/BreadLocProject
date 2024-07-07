@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dev.bread.nmap.mapper.BreadNmapMapper">
+
+	<select id="selectBreadStore" resultType="HashMap">
+		SELECT   BREAD_STORE_NM
+			   , BREAD_STORE_LOC_LAT
+			   , BREAD_STORE_LOC_LNG
+			   , BREAD_STORE_USE_YN
+		  FROM BREAD_STORE_INFO
+		 WHERE BREAD_STORE_USE_YN = 'Y'
+	</select>
+
+</mapper>
