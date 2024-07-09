@@ -14,8 +14,8 @@
             function bread_nmap(){
 
                 // map location list(map)
-//                 let nmap_loc = ${breadStore};
-                let nmap_loc = [{"BREAD_STORE_NM":"¼º½É´ç º»Á¡","BREAD_STORE_LOC_LNG":"127.427431","BREAD_STORE_LOC_LAT":"36.327701","BREAD_STORE_USE_YN":"Y"},{"BREAD_STORE_NM":"¼º½É´ç ´ëÀü¿ªÁ¡","BREAD_STORE_LOC_LNG":"127.4339","BREAD_STORE_LOC_LAT":"36.3322","BREAD_STORE_USE_YN":"Y"},{"BREAD_STORE_NM":"¼º½É´ç DCCÁ¡","BREAD_STORE_LOC_LNG":"127.3925","BREAD_STORE_LOC_LAT":"36.3753","BREAD_STORE_USE_YN":"Y"},{"BREAD_STORE_NM":"ÆÄ¸®¹Ù°Ô¶ß ´ëÀüÇÑºûÁ¡","BREAD_STORE_LOC_LNG":"127.3567","BREAD_STORE_LOC_LAT":"36.3631","BREAD_STORE_USE_YN":"Y"}];
+                let nmap_loc = ${breadStore};
+                // let nmap_loc = [{"BREAD_STORE_NM":"ï¿½ï¿½ï¿½É´ï¿½ ï¿½ï¿½ï¿½ï¿½","BREAD_STORE_LOC_LNG":"127.427431","BREAD_STORE_LOC_LAT":"36.327701","BREAD_STORE_USE_YN":"Y"},{"BREAD_STORE_NM":"ï¿½ï¿½ï¿½É´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½","BREAD_STORE_LOC_LNG":"127.4339","BREAD_STORE_LOC_LAT":"36.3322","BREAD_STORE_USE_YN":"Y"},{"BREAD_STORE_NM":"ï¿½ï¿½ï¿½É´ï¿½ DCCï¿½ï¿½","BREAD_STORE_LOC_LNG":"127.3925","BREAD_STORE_LOC_LAT":"36.3753","BREAD_STORE_USE_YN":"Y"},{"BREAD_STORE_NM":"ï¿½Ä¸ï¿½ï¿½Ù°Ô¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñºï¿½ï¿½ï¿½","BREAD_STORE_LOC_LNG":"127.3567","BREAD_STORE_LOC_LAT":"36.3631","BREAD_STORE_USE_YN":"Y"}];
                 
                 console.log(nmap_loc);
 //                 let nmap_loc = [
@@ -43,7 +43,7 @@
                 // map print marker
                 for(let i=0; i<nmap_loc.length; i++){
                     let mapMarker = new naver.maps.Marker({
-                        position: new naver.maps.LatLng(nmap_loc[i].BREAD_STORE_LOC_LAT, nmap_loc[i].BREAD_STORE_LOC_LNG),
+                        position: new naver.maps.LatLng(nmap_loc[i].LAT, nmap_loc[i].LNG),
                         map: map_view,
                         icon: {
                             url: "/img/nmap_marker.png",
